@@ -1,0 +1,418 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(250, 167, 246);
+    color: #222;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(270deg, #380955, #7b2cbf, #380955);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+
+/* Главный экран */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(250, 167, 246);
+}
+
+.hero img {
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+    text-align: center;
+}
+
+/* Секции */
+section {
+    padding: 50px 20px;
+}
+
+/* Блок о нас */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+/* Направления */
+.styles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.style-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.style-card {
+    background: #7b2cbf; /* фиолетовый */
+    color: white;
+}
+.style-card {
+    background: linear-gradient(270deg, #7b2cbf, #c77dff);
+    background-size: 600% 600%;
+    color: white;
+
+    animation: gradientMove 6s ease infinite;
+
+    padding: 20px;
+    border-radius: 15px;
+    width: 150px;
+    text-align: center;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.style-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+/* ГАЛЕРЕЯ */
+
+.gallery-container {
+    position: relative;
+    width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.gallery img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+/* СТРЕЛКИ */
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: rgba(0,0,0,0.4);
+
+    color: white;
+    border: none;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+
+
+/* Расписание */
+.schedule {
+    text-align: center;
+
+    background: linear-gradient(135deg, #7b2cbf, #c77dff);
+
+    color: white;
+
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 350px;
+    margin: auto;
+
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+
+/* Контакты */
+.contacts {
+    text-align: center;
+}
+/* Логотип */
+
+.logo {
+    width: 300px;
+}
+
+/* Подвал */
+/* FOOTER */
+
+footer {
+    background: linear-gradient(90deg, #111, #1f1f1f);
+
+    color: white;
+
+    padding: 40px 20px;
+
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    width: 140px;
+}
+
+.footer-text {
+    text-align: left;
+}
+
+.footer-title {
+    font-size: 22px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.footer-text p {
+    margin: 6px 0;
+}
+/* Красивое меню */
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: hotpink;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* СОЦСЕТИ */
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.socials a {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #571186;
+
+    color: white;
+
+    font-size: 28px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    transform: translateY(-5px);
+
+    background-color: hotpink;
+}
+.coaches p {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.coaches p:hover {
+    color: hotpink;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 350px;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#coachText {
+    white-space: pre-line;
+}
+
+@media (max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about img {
+        width: 90%;
+    }
+
+    .styles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .style-card {
+        width: 80%;
+    }
+
+    .gallery-container {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 250px;
+        height: 180px;
+    }
+
+    .schedule {
+        width: 90%;
+    }
+
+    .socials a {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+    

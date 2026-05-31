@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GUTIDance</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome (иконки) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--ШРИФТ (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<div id="coachModal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+
+        <span class="close" onclick="closeModal()">×</span>
+
+        <img id="coachImg" src="" alt="">
+        <h2 id="coachName"></h2>
+        <p id="coachText"></p>
+
+    </div>
+</div>
+
+<body>
+
+    <header>
+        <img class="logo" src="images/logo.png" alt="GUTIDance">
+
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#schedule">Расписание</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <h2>Танцевальная сборная СПБГУПТД</h2>
+
+        <p>
+            Выступления • Чемпионаты • Поддержка матчей
+        </p>
+
+        <img src="images/photo1.jpg" alt="GUTIDance">
+
+    </section>
+
+    <section id="about">
+
+        <h2>О нас</h2>
+
+        <div class="about">
+
+            <img src="images/photo2.jpg" alt="Команда">
+
+            <div class="about-text">
+
+                <p>
+                    Мы — танцевальная сборная СПБГУПТД «GUTIDance».
+                </p>
+
+                <p>
+            Наша команда принимает участие в вузовских, межвузовских,
+            городских и всероссийских соревнованиях.
+        </p>
+
+        <p>
+            Коллектив выступает на спортивных мероприятиях,
+            баскетбольных матчах и различных площадках,
+            включая «Газпром Арену».
+                </p>
+
+                <p>
+                    Коллектив дважды имеет звание
+                    «Лучшая студенческая группа поддержки России».
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Направления</h2>
+
+        <div class="styles">
+
+            <div class="style-card">Hip-Hop</div>
+            <div class="style-card">Contemporary</div>
+            <div class="style-card">Jazz Funk</div>
+            <div class="style-card">High Heels</div>
+            <div class="style-card">Afro</div>
+
+        </div>
+
+    </section>
+
+    <section id="gallery">
+
+        <h2>Галерея</h2>
+    
+        <div class="gallery-container">
+    
+            <button class="arrow left" onclick="scrollGallery(-1)">
+                ❮
+            </button>
+    
+            <div class="gallery" id="gallery-track">
+    
+                <img src="images/photo1.jpg" alt="">
+                <img src="images/photo2.jpg" alt="">
+                <img src="images/photo3.jpg" alt="">
+                <img src="images/photo4.jpg" alt="">
+                <img src="images/photo5.jpg" alt="">
+                <img src="images/photo6.jpg" alt="">
+                <img src="images/photo7.jpg" alt="">
+                <img src="images/photo8.jpg" alt="">
+                <img src="images/photo9.jpg" alt="">
+                <img src="images/photo11.jpg" alt="">
+    
+            </div>
+    
+            <button class="arrow right" onclick="scrollGallery(1)">
+                ❯
+            </button>
+    
+        </div>
+    
+    </section>
+
+    <section>
+
+        <h2>Тренерский состав</h2>
+    
+        <div class="about">
+    
+            <img src="images/photo10.jpg" alt="Тренеры">
+    
+            <div class="coaches">
+
+                <p onclick="openCoach('daria')">Дарья Бурая</p>
+                <p onclick="openCoach('margarita')">Маргарита Строкина</p>
+                <p onclick="openCoach('alexandra')">Александра Дурманова</p>
+                <p onclick="openCoach('larionova')">Дарья Ларионова</p>
+            
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <section id="schedule">
+
+        <h2>Расписание</h2>
+
+        <div class="schedule">
+
+            <p>Понедельник — 19:00</p>
+            <p>Среда — 19:00</p>
+            <p>Пятница — 19:00</p>
+
+        </div>
+
+    </section>
+
+    <section id="contacts" class="contacts">
+
+        <h2>Контакты</h2>
+    
+        <div class="socials">
+    
+            <a href="https://vk.com/gutidance" target="_blank">
+                <i class="fa-brands fa-vk"></i>
+            </a>
+    
+            <a href="https://t.me/gutidance" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+            </a>
+    
+            <a href="https://www.instagram.com/gutidance_suitd" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+    
+            <a href="https://www.tiktok.com/@guti_dance" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+    
+        </div>
+    
+    </section>
+
+    <footer>
+
+        <div class="footer-content">
+    
+            <img class="footer-logo" src="images/logo.png" alt="logo">
+    
+            <div class="footer-text">
+    
+                <p class="footer-title">
+                    Танцевальная сборная СПБГУПТД «GUTIDance»
+                </p>
+    
+                <p>
+                    Выступления • Чемпионаты • Поддержка матчей
+                </p>
+    
+                <p>
+                    Санкт-Петербург • 2026
+                </p>
+    
+            </div>
+    
+        </div>
+    
+    </footer>
+    
+    <script>
+
+        function scrollGallery(direction) {
+            const gallery = document.getElementById("gallery-track");
+        
+            gallery.scrollBy({
+                left: direction * 340,
+                behavior: "smooth"
+            });
+        }
+        
+        // данные тренеров
+        const coaches = {
+            daria: {
+                name: "Дарья Бурая",
+                img: "images/photodasha.jpg",
+                text: "Основатель и руководитель танцевальной студии GUTiDance\nОсновные стили танцев: waacking, jazz funk, hip hop."
+            },
+            margarita: {
+    name: "Маргарита Строкина",
+    img: "images/photorita.jpg",
+    text: "Тренер и хореограф Баскетбольной группы поддержки GUTiDance\nОсновные стили танцев: afro, hip-hop"
+},
+            alexandra: {
+                name: "Александра Дурманова",
+                img: "images/photosasha.jpg",
+                text: "Тренер и хореограф Баскетбольной группы поддержки GUTiDance\nОсновные стили танцев: high heels, jazz funk</p>"
+            },
+            larionova: {
+                name: "Дарья Ларионова",
+                img: "images/photolari.jpg",
+                text: "Тренер и хореограф Баскетбольной группы поддержки GUTiDance\nОсновные стили танцев: contemporary, jazz funk"
+            }
+        };
+        
+        function openCoach(key) {
+            const modal = document.getElementById("coachModal");
+        
+            document.getElementById("coachName").textContent = coaches[key].name;
+            document.getElementById("coachImg").src = coaches[key].img;
+            document.getElementById("coachText").textContent = coaches[key].text;
+        
+            modal.style.display = "flex";
+        }
+        
+        function closeModal() {
+            document.getElementById("coachModal").style.display = "none";
+        }
+        
+        </script>
+        
+</body>
+
+</html>

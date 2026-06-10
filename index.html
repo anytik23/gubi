@@ -227,7 +227,17 @@
         </div>
     
     </footer>
+    <div id="imageModal" class="image-modal">
+
+        <span class="image-close">&times;</span>
     
+        <button class="modal-arrow modal-left">❮</button>
+    
+        <img class="image-modal-content" id="modalImg">
+    
+        <button class="modal-arrow modal-right">❯</button>
+    
+    </div>
     <script>
 
         function scrollGallery(direction) {
@@ -276,8 +286,77 @@
         function closeModal() {
             document.getElementById("coachModal").style.display = "none";
         }
-        
+        const imageModal = document.getElementById("imageModal");
+const imageModalImg = document.getElementById("modalImg");
+
+const galleryImages = document.querySelectorAll(".gallery img");
+
+let currentImage = 0;
+
+galleryImages.forEach((img, index) => {
+
+    img.addEventListener("click", () => {
+
+        currentImage = index;
+
+        imageModal.style.display = "flex";
+        imageModalImg.src = img.src;
+
+    });
+
+});
+
+function showImage(index) {
+
+    imageModalImg.src = galleryImages[index].src;
+
+}
+
+document.querySelector(".modal-left")
+.addEventListener("click", () => {
+
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = galleryImages.length - 1;
+    }
+
+    showImage(currentImage);
+
+});
+
+document.querySelector(".modal-right")
+.addEventListener("click", () => {
+
+    currentImage++;
+
+    if (currentImage >= galleryImages.length) {
+        currentImage = 0;
+    }
+
+    showImage(currentImage);
+
+});
+
+document.querySelector(".image-close")
+.addEventListener("click", () => {
+
+    imageModal.style.display = "none";
+
+});
+
+imageModal.addEventListener("click", (e) => {
+
+    if (e.target === imageModal) {
+        imageModal.style.display = "none";
+    }
+
+});
+
+
         </script>
+
+        
         
 </body>
 
